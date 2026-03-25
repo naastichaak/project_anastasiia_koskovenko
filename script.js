@@ -1,17 +1,3 @@
-function toggleMenu() {
-  document.getElementById('navMenu').classList.toggle('open');
-}
-
-// Close menu when clicking a nav link on mobile
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('#navMenu a').forEach(link => {
-    link.addEventListener('click', () => {
-      document.getElementById('navMenu').classList.remove('open');
-    });
-  });
-});
-
-// Intersection observer for fade-in animations
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
