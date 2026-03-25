@@ -90,7 +90,7 @@ nav ul a:hover { opacity: 1; }
 
 .hero {
   min-height: 100vh;
-  background: url('/images/hero.png') center/cover no-repeat;
+  background: url('/images/hero.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -260,21 +260,21 @@ section { padding: 80px 60px; }
 
 .ready-scroll {
   display: flex;
-  gap: 16px;
+  gap: 25px;
   overflow-x: auto;
   padding-bottom: 12px;
   scrollbar-width: thin;
   scrollbar-color: var(--btn) transparent;
 }
 .ready-item {
-  flex: 0 0 250px;
+  flex: 0 0 220px;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
 }
 .ready-item img {
   width: 100%;
-  height: 200px;
+  height: 170px;
   object-fit: cover;
   display: block;
   transition: transform 0.3s;
