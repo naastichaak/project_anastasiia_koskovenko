@@ -90,11 +90,11 @@ nav ul a:hover { opacity: 1; }
 
 .hero {
   height: 100vh;
-  background-image: url("/hero.png");
+  background-image: url("/images/hero.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,13 +127,6 @@ nav ul a:hover { opacity: 1; }
   opacity: 0.9;
   margin-bottom: 32px;
   line-height: 1.6;
-}
-
-.hero-corners {
-  position: absolute;
-  inset: 40px;
-  z-index: 2;
-  pointer-events: none;
 }
 .btn {
   display: inline-block;
@@ -449,9 +442,6 @@ footer {
 
   .contact-page { padding: 100px 20px 60px; }
   .contact-page h1 { font-size: 28px; }
-
-  .hero-corners { inset: 20px; }
-  .corner { width: 24px; height: 24px; }
 }
 
 @media (max-width: 480px) {
