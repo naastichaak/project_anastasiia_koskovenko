@@ -90,7 +90,7 @@ nav ul a:hover { opacity: 1; }
 
 .hero {
   min-height: 100vh;
-  background: url('images/hero.png') center/cover no-repeat;
+  background: url('/images/hero.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -259,7 +259,6 @@ section { padding: 80px 60px; }
 }
 
 .ready-scroll {
-  width: 695px;
   display: flex;
   gap: 16px;
   overflow-x: auto;
@@ -268,14 +267,14 @@ section { padding: 80px 60px; }
   scrollbar-color: var(--btn) transparent;
 }
 .ready-item {
-  flex: 0 0 220px;
+  flex: 0 0 250px;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
 }
 .ready-item img {
   width: 100%;
-  height: 170px;
+  height: 200px;
   object-fit: cover;
   display: block;
   transition: transform 0.3s;
