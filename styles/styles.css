@@ -89,7 +89,7 @@ nav ul a:hover { opacity: 1; }
 }
 
 .hero {
-  min-height: 100vh;
+  height: 100vh;
   background-image: url("/hero.png");
   background-size: cover;
   background-position: center;
