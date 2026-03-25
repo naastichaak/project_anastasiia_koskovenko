@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoRa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+  <nav id="mainNav">
+    <a class="logo"href="#mainNav">
+      <img src="images/SoRa.png" alt="">
+    </a>
+    <ul id="navMenu">
+      <li><a href="#about">About us</a></li>
+      <li><a href="#collections">Collections</a></li>
+      <li><a href="#advantages">Advantages</a></li>
+      <li><a href="contact.html">Contact us</a></li>
+    </ul>
+    <div class="nav-icons">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+<div class="page active" id="page-home">
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Quality in every detail</h1>
+      <p>Tailor-made furniture created with premium materials, modern technologies, and precise craftsmanship.</p>
+      <a href="#" class="btn" onclick="showPage('contact')">Book a consultation</a>
+    </div>
+  </section>
+
+  <section id="about" style="padding:80px 60px;">
+    <div class="about fade-in">
+      <div class="about-left">
+        <small>About us</small>
+        <h2>Creating<br>Spaces<br>That Feel<br>Like Home</h2>
+        <p class="about-text">We created this service to help you bring comfort and style individually into your home or workplace. Our platform offers an easy and convenient way to order custom-made furniture that perfectly matches your needs, taste, and interior concept.</p>
+        <p class="about-text" style="margin-top:12px;">Whether you're looking for a modern kitchen, a functional wardrobe, a stylish living room solution, or bespoke furniture for commercial projects, we will help you achieve the best result. We take care of design, customise every detail, and let us take care of quality production and multitasking.</p>
+      </div>
+      <div class="about-right">
+        <img src="images/about1.jpg" alt="Interior">
+        <img src="images/about2.jpg" alt="Sofa">
+        <img src="images/projects3.jpg" alt="Chair">
+      </div>
+    </div>
+  </section>
+
+  <section id="collections" style="padding:60px 60px;">
+    <h2 class="section-title fade-in">Our products Collections</h2>
+    <div class="collections-grid fade-in">
+      <div class="collection-card">
+        <img src="images/products1.jpg" alt="Cupboards">
+        <div class="label">Cupboards</div>
+      </div>
+      <div class="collection-card">
+        <img src="images/products2.jpg" alt="Beds">
+        <div class="label">Beds</div>
+      </div>
+      <div class="collection-card">
+        <img src="images/products3.jpg" alt="Tables">
+        <div class="label">Tables</div>
+      </div>
+      <div class="collection-card">
+        <img src="images/products4.jpg" alt="Sofas">
+        <div class="label">Sofas</div>
+      </div>
+      <div class="collection-card">
+        <img src="images/products5.jpg" alt="Dining Room">
+        <div class="label">Dining Room</div>
+      </div>
+      <div class="collection-card">
+        <img src="images/products6.jpg" alt="Home Office">
+        <div class="label">Home Office</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="advantages" style="padding:60px 60px;">
+    <h2 class="section-title fade-in">Advantages</h2>
+    <p class="advantages-sub fade-in">"Design services in three steps"</p>
+    <div class="advantages-grid">
+      <div class="adv-card fade-in">
+        <img src="images/advantages1.jpg" alt="Measurements">
+        <h4>Room measurements</h4>
+        <p>Measurement of the premises at a time convenient for you by agreement. The main samples of materials are available, so there is no need to visit the VIYAR showroom.</p>
+      </div>
+      <div class="adv-card fade-in">
+        <img src="images/advantages2.jpg" alt="Visualization">
+        <h4>Project Visualization</h4>
+        <p>Creation of a project visualisation with materials and dimensions. It is also possible to create a colour visualisation to understand the appearance.</p>
+      </div>
+      <div class="adv-card fade-in">
+        <img src="images/advantages3.jpg" alt="Assembly">
+        <h4>Furniture assembly</h4>
+        <p>Furniture assembly takes 1 to 4 days. All necessary tools are available. Over 15 years of experience in the field of assembly.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:60px 60px;">
+    <h2 class="section-title fade-in">Ready-made projects</h2>
+    <div class="ready-scroll fade-in">
+      <div class="ready-item">
+        <img src="images/projects1.jpg" alt="Tables">
+        <div class="name">Tables</div>
+      </div>
+      <div class="ready-item">
+        <img src="images/projects2.jpg" alt="Computer Desk">
+        <div class="name">Computer Desk</div>
+      </div>
+      <div class="ready-item">
+        <img src="images/projects3.jpg" alt="Living Room">
+        <div class="name">Living Room Furniture</div>
+      </div>
+      <div class="ready-item">
+        <img src="images/projects4.jpg" alt="Dining Room">
+        <div class="name">Dinning Room Furniture</div>
+      </div>
+      <div class="ready-item">
+        <img src="images/projects5.jpg" alt="Kitchen">
+        <div class="name">Kitchen Furniture</div>
+      </div>
+      <div class="ready-item">
+        <img src="images/projects6.jpg" alt="Bedroom">
+        <div class="name">Bedroom Furniture</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-logo">
+        <a class="logo" href="index.html" style="font-size:30px;">
+          <img src="images/SoRa.png" alt="">
+        </a>
+        <p class="footer-addr">1B Novokostiantynivska<br>Street, Kyiv, Ukraine, 02000</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">in</a>
+          <a href="#" aria-label="Behance">be</a>
+          <a href="#" aria-label="Dribbble">◎</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Our products Collections</h5>
+        <ul>
+          <li><a href="#">Bed room</a></li>
+          <li><a href="#">Living room</a></li>
+          <li><a href="#">Fabrics sofa</a></li>
+          <li><a href="#">Kitchen</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Information</h5>
+        <ul>
+          <li><a href="#about">About us</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Location</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Account</h5>
+        <ul>
+          <li><a href="#">My account</a></li>
+          <li><a href="#">Orders</a></li>
+          <li><a href="#">Search</a></li>
+          <li><a href="#">Payment</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 SoRa. All rights reserved.</div>
+  </footer>
+
+</div>
+
+<script src="/script.js"></script>
+</body>
+</html>
+

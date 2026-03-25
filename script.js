@@ -1,0 +1,25 @@
+function toggleMenu() {
+  document.getElementById('navMenu').classList.toggle('open');
+}
+
+// Close menu when clicking a nav link on mobile
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('#navMenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('navMenu').classList.remove('open');
+    });
+  });
+});
+
+// Intersection observer for fade-in animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+

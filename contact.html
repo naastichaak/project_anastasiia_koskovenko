@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <nav id="mainNav">
+        <a class="logo" href="index.html">
+            <img src="images/SoRa.png" alt="">
+        </a>
+        <ul id="navMenu">
+            <li><a href="index.html">About us</a></li>
+            <li><a href="index.html">Collections</a></li>
+            <li><a href="index.html">Advantages</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+        <div class="nav-icons">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+            <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="page" id="page-contact">
+        <div class="contact-page">
+            <h1>Contact Us</h1>
+
+            <div class="contact-form">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="Enter your phone number">
+                </div>
+
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea placeholder="Write your question"></textarea>
+                </div>
+                <p class="form-note">By submitting this form, you agree to the privacy policy</p>
+                <button class="btn">Contact Our Team</button>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a class="logo" href="index.html" style="font-size:30px;">
+                        <img src="images/SoRa.png" alt="">
+                    </a>
+                    <p class="footer-addr">1B Novokostiantynivska<br>Street, Kyiv, Ukraine, 02000</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Instagram">in</a>
+                        <a href="#" aria-label="Behance">be</a>
+                        <a href="#" aria-label="Dribbble">◎</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Our products Collections</h5>
+                    <ul>
+                        <li><a href="#">Bed room</a></li>
+                        <li><a href="#">Living room</a></li>
+                        <li><a href="#">Fabrics sofa</a></li>
+                        <li><a href="#">Kitchen</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Information</h5>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Location</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Account</h5>
+                    <ul>
+                        <li><a href="#">My account</a></li>
+                        <li><a href="#">Orders</a></li>
+                        <li><a href="#">Search</a></li>
+                        <li><a href="#">Payment</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">© 2026 SoRa. All rights reserved.</div>
+        </footer>
+    </div>
+</body>
+</html>
