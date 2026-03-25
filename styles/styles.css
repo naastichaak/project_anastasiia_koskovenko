@@ -89,10 +89,9 @@ nav ul a:hover { opacity: 1; }
   transition: all 0.3s;
 }
 
-/* ─── HERO ─── */
 .hero {
   min-height: 100vh;
-  background: url('/images/hero.jpg') center/cover no-repeat;
+  background: url('/images/hero.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,39 +126,12 @@ nav ul a:hover { opacity: 1; }
   line-height: 1.6;
 }
 
-/* ─── HERO CORNER BRACKETS ─── */
 .hero-corners {
   position: absolute;
   inset: 40px;
   z-index: 2;
   pointer-events: none;
 }
-
-.corner {
-  /* position: absolute; */
-  width: 36px;
-  height: 36px;
-  border-color: rgba(247,248,249,0.75);
-  border-style: solid;
-}
-.corner-tl {
-  top: 0; left: 0;
-  border-width: 2px 0 0 2px;
-}
-.corner-tr {
-  top: 0; right: 0;
-  border-width: 2px 2px 0 0;
-}
-.corner-bl {
-  bottom: 0; left: 0;
-  border-width: 0 0 2px 2px;
-}
-.corner-br {
-  bottom: 0; right: 0;
-  border-width: 0 2px 2px 0;
-}
-
-/* ─── BUTTONS ─── */
 .btn {
   display: inline-block;
   background: var(--btn);
