@@ -43,7 +43,7 @@ nav ul a:hover { opacity: 1; }
 .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
 
 .hero {
-  background: url("../images/hero.jpg") center/cover no-repeat;
+  background: url("/images/hero.jpg") center/cover no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;
