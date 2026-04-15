@@ -1,105 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact SoRa to book a custom furniture consultation in Kyiv for kitchens, bedrooms, living rooms, and office interiors.">
+  <meta name="keywords" content="contact custom furniture Kyiv, bespoke furniture consultation, kitchen furniture design, bedroom furniture, living room furniture">
+  <title>Contact SoRa | Book a Custom Furniture Consultation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
-
 <body>
-    <nav id="mainNav">
-        <a class="logo" href="index.html">
-            <img src="images/SoRa.png" alt="">
-        </a>
-        <ul id="navMenu">
-            <li><a href="index.html">About us</a></li>
-            <li><a href="index.html">Collections</a></li>
-            <li><a href="index.html">Advantages</a></li>
-            <li><a href="contact.html">Contact us</a></li>
-        </ul>
-        <div class="nav-icons">
-            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
-            <span></span><span></span><span></span>
-            </button>
-        </div>
+  <header class="site-header">
+    <nav id="mainNav" aria-label="Primary navigation">
+      <a class="logo" href="index.html" aria-label="SoRa home page">
+        <img src="images/SoRa.png" alt="SoRa custom furniture logo">
+      </a>
+
+      <ul id="navMenu">
+        <li><a href="index.html#about">About us</a></li>
+        <li><a href="index.html#collections">Furniture Collections</a></li>
+        <li><a href="index.html#advantages">Our Advantages</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+
+      <div class="nav-icons">
+                <svg viewBox="0 0 24 24" aria-label="Search"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <svg viewBox="0 0 24 24" aria-label="Cart"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                <svg viewBox="0 0 24 24" aria-label="Account"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open Navigation Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
     </nav>
+  </header>
 
-    <div class="page" id="page-contact">
-        <div class="contact-page">
-            <h1>Contact Us</h1>
+  <main>
+    <section class="contact-page" aria-labelledby="contact-title">
+      <div class="contact-wrapper fade-in">
+        <div class="contact-intro">
+          <p class="section-kicker">Contact SoRa</p>
+          <h1 id="contact-title">Book your custom furniture consultation</h1>
+          <p class="contact-lead">
+            Tell us about your kitchen, bedroom, living room, or office project. We will help you
+            choose the right bespoke furniture solution for your space.
+          </p>
 
-            <div class="contact-form">
-                <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" placeholder="Enter your full name">
-                </div>
-
-                <div class="form-group">
-                    <label>Phone Number</label>
-                    <input type="tel" placeholder="Enter your phone number">
-                </div>
-
-                <div class="form-group">
-                    <label>Message</label>
-                    <textarea placeholder="Write your question"></textarea>
-                </div>
-                <p class="form-note">By submitting this form, you agree to the privacy policy</p>
-                <button class="btn">Contact Our Team</button>
-            </div>
+          <div class="contact-details">
+            <p><strong>Address:</strong> 1B Novokostiantynivska Street, Kyiv, Ukraine, 02000</p>
+            <p><strong>Email:</strong> hello@sora-furniture.com</p>
+            <p><strong>Phone:</strong> +380 00 000 00 00</p>
+          </div>
         </div>
 
-        <footer>
-            <div class="footer-top">
-                <div class="footer-logo">
-                    <a class="logo" href="index.html" style="font-size:30px;">
-                        <img src="images/SoRa.png" alt="">
-                    </a>
-                    <p class="footer-addr">1B Novokostiantynivska<br>Street, Kyiv, Ukraine, 02000</p>
-                    <div class="social-icons">
-                        <a href="#" aria-label="Facebook">f</a>
-                        <a href="#" aria-label="Instagram">in</a>
-                        <a href="#" aria-label="Behance">be</a>
-                        <a href="#" aria-label="Dribbble">◎</a>
-                    </div>
-                </div>
+        <form class="contact-form" action="#" method="post">
+          <div class="form-group">
+            <label for="full-name">Full name</label>
+            <input id="full-name" name="full-name" type="text" placeholder="Enter your full name" required>
+          </div>
 
-                <div class="footer-col">
-                    <h5>Our products Collections</h5>
-                    <ul>
-                        <li><a href="#">Bed room</a></li>
-                        <li><a href="#">Living room</a></li>
-                        <li><a href="#">Fabrics sofa</a></li>
-                        <li><a href="#">Kitchen</a></li>
-                    </ul>
-                </div>
+          <div class="form-group">
+            <label for="phone-number">Phone number</label>
+            <input id="phone-number" name="phone-number" type="tel" placeholder="Enter your phone number" required>
+          </div>
 
-                <div class="footer-col">
-                    <h5>Information</h5>
-                    <ul>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="contact.html">Contact us</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Location</a></li>
-                    </ul>
-                </div>
+          <div class="form-group">
+            <label for="email-address">Email address</label>
+            <input id="email-address" name="email-address" type="email" placeholder="Enter your email address" required>
+          </div>
 
-                <div class="footer-col">
-                    <h5>Account</h5>
-                    <ul>
-                        <li><a href="#">My account</a></li>
-                        <li><a href="#">Orders</a></li>
-                        <li><a href="#">Search</a></li>
-                        <li><a href="#">Payment</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">© 2026 SoRa. All rights reserved.</div>
-        </footer>
+          <div class="form-group">
+            <label for="message">Project details</label>
+            <textarea id="message" name="message" placeholder="Describe the furniture you need for your space" required></textarea>
+          </div>
+
+          <p class="form-note">By submitting this form, you agree to be contacted about your custom furniture project.</p>
+          <button class="btn" type="submit">Send your furniture request</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <section class="footer-logo" aria-label="SoRa studio details">
+        <a class="logo" href="index.html" aria-label="Return to SoRa home page">
+          <img src="images/SoRa.png" alt="SoRa custom furniture logo">
+        </a>
+        <p class="footer-addr">1B Novokostiantynivska Street, Kyiv, Ukraine, 02000</p>
+
+        <div class="social-icons">
+          <a href="#" aria-label="Visit SoRa on Facebook">f</a>
+          <a href="#" aria-label="Visit SoRa on Instagram">in</a>
+          <a href="#" aria-label="Visit SoRa on Behance">be</a>
+          <a href="#" aria-label="Visit SoRa on Dribbble">◎</a>
+        </div>
+      </section>
+
+      <section class="footer-col" aria-label="Furniture categories">
+        <h4>Furniture categories</h4>
+        <ul>
+          <li><a href="index.html#collections">Custom bedroom furniture</a></li>
+          <li><a href="index.html#collections">Living room furniture</a></li>
+          <li><a href="index.html#collections">Custom sofas</a></li>
+          <li><a href="index.html#collections">Kitchen furniture solutions</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col" aria-label="Company information">
+        <h4>Company information</h4>
+        <ul>
+          <li><a href="index.html#about">About the furniture studio</a></li>
+          <li><a href="contact.html">Contact the SoRa team</a></li>
+          <li><a href="index.html#advantages">Our furniture process</a></li>
+          <li><a href="index.html#projects-title">Completed furniture projects</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col" aria-label="Customer resources">
+        <h4>Customer resources</h4>
+        <ul>
+          <li><a href="contact.html">Request a custom furniture quote</a></li>
+          <li><a href="contact.html">Ask about design services</a></li>
+          <li><a href="index.html#collections">Browse furniture collections</a></li>
+          <li><a href="index.html#mainNav">Back to the top navigation</a></li>
+        </ul>
+      </section>
     </div>
+
+    <div class="footer-bottom">© 2026 SoRa. Custom furniture and interior solutions in Kyiv.</div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
