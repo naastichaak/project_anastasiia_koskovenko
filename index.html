@@ -20,30 +20,50 @@
 
       <ul id="navMenu">
         <li><a href="#about">About us</a></li>
-        <li><a href="#collections">Furniture Collections</a></li>
-        <li><a href="#advantages">Our Advantages</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#estimator">Estimator</a></li>
+        <li><a href="#advantages">Advantages</a></li>
         <li><a href="contact.html">Contact us</a></li>
       </ul>
-      
+
       <div class="nav-icons">
-                <svg viewBox="0 0 24 24" aria-label="Search"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                <svg viewBox="0 0 24 24" aria-label="Cart"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-                <svg viewBox="0 0 24 24" aria-label="Account"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open Navigation Menu">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
+        <button class="icon-button shortlist-button" id="shortlistButton" type="button" aria-label="Furniture shortlist">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.7-4.35-9.33-8.22C.85 10.12 1.24 6.4 4.1 4.53c2.13-1.39 4.84-.95 6.4 1.03 1.56-1.98 4.27-2.42 6.4-1.03 2.86 1.87 3.25 5.59 1.43 8.25C18.7 16.65 12 21 12 21z"/></svg>
+          <span id="shortlistCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Open navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
   </header>
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-content">
-        <h1 id="hero-title" class="fade-in">Quality Custom Furniture in Every Detail</h1>
+        <p class="section-kicker fade-in">Designed for modern living</p>
+        <h1 id="hero-title" class="fade-in">Quality custom furniture in every detail</h1>
         <p class="fade-in">
           Tailor-made furniture created with premium materials and modern technologies in Ukraine.
         </p>
-        <a href="contact.html" class="btn fade-in">Book a Furniture Consultation</a>
+        <div class="hero-actions fade-in">
+          <a href="contact.html" class="btn">Book a consultation</a>
+          <a href="#estimator" class="btn btn-secondary">Try the price estimator</a>
+        </div>
+        <div class="hero-stats fade-in" aria-label="SoRa company highlights">
+          <article>
+            <strong>15+</strong>
+            <span>years of furniture experience</span>
+          </article>
+          <article>
+            <strong>3D</strong>
+            <span>visual planning for each project</span>
+          </article>
+          <article>
+            <strong>1-4</strong>
+            <span>days for final assembly</span>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -51,9 +71,12 @@
       <article class="about fade-in">
         <div class="about-left">
           <p class="section-kicker">About SoRa</p>
-          <h2>Creating Bespoke Spaces That Feel Like Home</h2>
+          <h2>Creating bespoke spaces that feel like home</h2>
           <p class="about-text">
-            Our platform offers an easy way to order custom-made furniture that matches your needs, taste, and interior concept. From modern kitchens to functional wardrobes, we handle everything from design to production.
+            SoRa helps customers design kitchens, bedrooms, living rooms, and workspaces with made-to-order furniture that matches their needs, taste, and room dimensions.
+          </p>
+          <p class="about-text">
+            We manage the full process from consultation and measurements to 3D visualization, production, and professional installation.
           </p>
         </div>
 
@@ -66,109 +89,216 @@
     </section>
 
     <section id="collections" aria-labelledby="collections-title">
-      <h2 id="collections-title" class="section-title fade-in">Our Product Collections</h2>
+      <div class="section-head">
+        <div>
+          <p class="section-kicker fade-in">Browse furniture</p>
+          <h2 id="collections-title" class="section-title fade-in">Our product collections</h2>
+        </div>
+        <p class="section-intro fade-in">
+          Use the filters to explore furniture by room type, then save your favorite items to your shortlist.
+        </p>
+      </div>
 
-      <div class="collections-grid fade-in">
-        <article class="collection-card">
+      <div class="filter-bar fade-in" role="group" aria-label="Collection filters">
+        <button class="filter-btn active" type="button" data-filter="all">All</button>
+        <button class="filter-btn" type="button" data-filter="storage">Storage</button>
+        <button class="filter-btn" type="button" data-filter="bedroom">Bedroom</button>
+        <button class="filter-btn" type="button" data-filter="living">Living room</button>
+        <button class="filter-btn" type="button" data-filter="dining">Dining</button>
+        <button class="filter-btn" type="button" data-filter="office">Office</button>
+      </div>
+
+      <div class="collections-grid fade-in" id="collectionsGrid">
+        <article class="collection-card" data-category="storage">
           <img src="images/products1.jpg" alt="Custom cupboard storage furniture with modern finishes">
-          <h3 class="label">Cupboards</h3>
+          <div class="card-copy">
+            <h3 class="label">Cupboards</h3>
+            <p>Built-in storage for hallways, bedrooms, and living spaces.</p>
+            <button class="card-action" type="button" data-shortlist="Cupboards">Add to shortlist</button>
+          </div>
         </article>
 
-        <article class="collection-card">
+        <article class="collection-card" data-category="bedroom">
           <img src="images/products2.jpg" alt="Bespoke bed design for a calm contemporary bedroom">
-          <h3 class="label">Beds</h3>
+          <div class="card-copy">
+            <h3 class="label">Beds</h3>
+            <p>Comfort-focused bed frames with custom dimensions and materials.</p>
+            <button class="card-action" type="button" data-shortlist="Beds">Add to shortlist</button>
+          </div>
         </article>
 
-        <article class="collection-card">
+        <article class="collection-card" data-category="dining">
           <img src="images/products3.jpg" alt="Modern custom table for dining or workspace use">
-          <h3 class="label">Tables</h3>
+          <div class="card-copy">
+            <h3 class="label">Tables</h3>
+            <p>Flexible table solutions for dining zones, meetings, and hybrid work.</p>
+            <button class="card-action" type="button" data-shortlist="Tables">Add to shortlist</button>
+          </div>
         </article>
 
-        <article class="collection-card">
+        <article class="collection-card" data-category="living">
           <img src="images/products4.jpg" alt="Soft custom sofa built for a stylish living room">
-          <h3 class="label">Sofas</h3>
+          <div class="card-copy">
+            <h3 class="label">Sofas</h3>
+            <p>Soft seating made to fit your room layout and design style.</p>
+            <button class="card-action" type="button" data-shortlist="Sofas">Add to shortlist</button>
+          </div>
         </article>
 
-        <article class="collection-card">
+        <article class="collection-card" data-category="dining">
           <img src="images/products5.jpg" alt="Dining room furniture arranged for family meals and hosting">
-          <h3 class="label">Dining Room</h3>
+          <div class="card-copy">
+            <h3 class="label">Dining Room</h3>
+            <p>Complete dining compositions created for comfort and hosting.</p>
+            <button class="card-action" type="button" data-shortlist="Dining Room">Add to shortlist</button>
+          </div>
         </article>
 
-        <article class="collection-card">
+        <article class="collection-card" data-category="office">
           <img src="images/products6.jpg" alt="Home office furniture designed for focused daily work">
-          <h3 class="label">Home Office</h3>
+          <div class="card-copy">
+            <h3 class="label">Home Office</h3>
+            <p>Productive desk and storage systems for focused remote work.</p>
+            <button class="card-action" type="button" data-shortlist="Home Office">Add to shortlist</button>
+          </div>
         </article>
       </div>
     </section>
 
+    <section id="estimator" class="estimate-section" aria-labelledby="estimate-title">
+      <div class="estimate-layout fade-in">
+        <div class="estimate-copy">
+          <p class="section-kicker">Interactive feature</p>
+          <h2 id="estimate-title" class="section-title">Quick furniture project estimator</h2>
+          <p class="section-intro">
+            This tool gives visitors a rough budget and timeline based on their room type, material choice, and delivery priority.
+          </p>
+          <ul class="estimate-points">
+            <li>Great for demonstrating JavaScript functionality in your final presentation</li>
+            <li>Shows clear value for end users who want faster planning</li>
+            <li>Supports the contact page by helping visitors prepare project details</li>
+          </ul>
+        </div>
+
+        <form class="estimate-form" id="estimateForm">
+          <div class="form-group">
+            <label for="roomType">Room type</label>
+            <select id="roomType" name="roomType">
+              <option value="900">Bedroom</option>
+              <option value="1200">Living room</option>
+              <option value="1500">Kitchen</option>
+              <option value="1000">Home office</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="materialType">Material quality</label>
+            <select id="materialType" name="materialType">
+              <option value="1">Standard finish</option>
+              <option value="1.2">Premium wood veneer</option>
+              <option value="1.35">Luxury designer finish</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="storageLevel">Storage complexity</label>
+            <input id="storageLevel" name="storageLevel" type="range" min="1" max="5" value="3">
+            <p class="range-note">Current level: <span id="storageLevelValue">3</span>/5</p>
+          </div>
+
+          <div class="form-group">
+            <label for="timeline">Delivery priority</label>
+            <select id="timeline" name="timeline">
+              <option value="1">Standard timeline</option>
+              <option value="1.15">Priority production</option>
+            </select>
+          </div>
+
+          <button class="btn" type="submit">Calculate estimate</button>
+        </form>
+
+        <aside class="estimate-result" id="estimateResult" aria-live="polite">
+          <p class="result-kicker">Estimated result</p>
+          <h3>From €<span id="estimatePrice">1170</span></h3>
+          <p id="estimateTimeline">Approximate completion time: 4-6 weeks</p>
+          <p id="estimateRecommendation">
+            A bedroom project with medium storage is a strong starting option for a balanced budget.
+          </p>
+        </aside>
+      </div>
+    </section>
+
     <section id="advantages" aria-labelledby="advantages-title">
-      <h2 id="advantages-title" class="section-title fade-in">Our Advantages</h2>
-      <p class="advantages-sub fade-in">"Design services in three simple steps"</p>
+      <h2 id="advantages-title" class="section-title fade-in">Our advantages</h2>
+      <p class="advantages-sub fade-in">Design services in three simple steps</p>
 
       <div class="advantages-grid">
         <article class="adv-card fade-in">
           <img src="images/advantages1.jpg" alt="Furniture specialist taking room measurements for a custom project">
-          <h3>Room Measurements</h3>
+          <h3>Room measurements</h3>
           <p>
-            Precise premises measurement at your convenience. View material samples without visiting a showroom.
+            Precise measurements at your convenience. Customers can review material samples without visiting a showroom.
           </p>
         </article>
 
         <article class="adv-card fade-in">
           <img src="images/advantages2.jpg" alt="Digital furniture visualization showing layout and material choices">
-          <h3>Project Visualization</h3>
+          <h3>Project visualization</h3>
           <p>
-            3D visualization of your project with chosen materials and dimensions to ensure the perfect look.
+            3D visualization of your project with chosen materials and dimensions to ensure the final look fits your space.
           </p>
         </article>
 
         <article class="adv-card fade-in">
           <img src="images/advantages3.jpg" alt="Professional team assembling custom furniture inside a finished room">
-          <h3>Professional Assembly</h3>
+          <h3>Professional assembly</h3>
           <p>
-            Fast assembly within 1 to 4 days by specialists with over 15 years of experience.
+            Fast assembly within 1 to 4 days by specialists with more than 15 years of practical experience.
           </p>
         </article>
       </div>
     </section>
 
     <section aria-labelledby="projects-title">
-      <h2 id="projects-title" class="section-title fade-in">Ready-made furniture projects and interior ideas</h2>
+      <div class="projects-head fade-in">
+        <div>
+          <p class="section-kicker">Project inspiration</p>
+          <h2 id="projects-title" class="section-title">Ready-made furniture projects and interior ideas</h2>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn" id="scrollLeft" type="button" aria-label="Scroll projects left">←</button>
+          <button class="slider-btn" id="scrollRight" type="button" aria-label="Scroll projects right">→</button>
+        </div>
+      </div>
       <p class="section-intro fade-in">
         These completed spaces show how custom furniture can improve flow, storage, and style across different rooms.
       </p>
 
-      <div class="ready-scroll fade-in">
+      <div class="ready-scroll fade-in" id="projectsSlider">
         <article class="ready-item">
           <img src="images/projects1.jpg" alt="Ready-made project featuring custom tables for a functional interior">
           <h3 class="name">Tables</h3>
         </article>
-
         <article class="ready-item">
           <img src="images/projects2.jpg" alt="Compact computer desk designed for a productive home office">
           <h3 class="name">Desks</h3>
         </article>
-
         <article class="ready-item">
           <img src="images/projects3.jpg" alt="Living room furniture project with modern storage and seating">
           <h3 class="name">Living room</h3>
         </article>
-
         <article class="ready-item">
           <img src="images/projects4.jpg" alt="Dining room furniture project created for family gatherings">
           <h3 class="name">Room furniture</h3>
         </article>
-
         <article class="ready-item">
           <img src="images/projects5.jpg" alt="Custom kitchen furniture with efficient storage planning">
           <h3 class="name">Kitchen furniture</h3>
         </article>
-
         <article class="ready-item">
           <img src="images/projects6.jpg" alt="Bedroom furniture project with soft textures and calm tones">
           <h3 class="name">Bedroom furniture</h3>
         </article>
-
         <article class="ready-item">
           <img src="images/products5.jpg" alt="Dining furniture set styled for a welcoming interior concept">
           <h3 class="name">Dining furniture</h3>
@@ -217,7 +347,7 @@
         <h4>Customer resources</h4>
         <ul>
           <li><a href="contact.html">Request a custom furniture quote</a></li>
-          <li><a href="contact.html">Ask about design services</a></li>
+          <li><a href="#estimator">Try the quick estimator</a></li>
           <li><a href="#collections">Browse furniture collections</a></li>
           <li><a href="#mainNav">Back to the top navigation</a></li>
         </ul>

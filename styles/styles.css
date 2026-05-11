@@ -2,6 +2,7 @@
   --bg-ui: #948371;
   --bg-overlay: rgba(100, 75, 55, 0.45);
   --surface: rgba(255, 255, 255, 0.08);
+  --surface-strong: rgba(255, 255, 255, 0.12);
   --btn: #640000;
   --btn-hover: #530000;
   --white: #f7f8f9;
@@ -88,17 +89,29 @@ nav ul a:focus-visible {
 
 .nav-icons {
   display: flex;
-  gap: 18px;
+  gap: 12px;
   align-items: center;
 }
 
-.nav-icons svg {
-  width: 20px;
-  height: 20px;
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  color: var(--white);
+  padding: 8px 14px;
   cursor: pointer;
+  font: 600 14px var(--font);
+}
+
+.icon-button svg {
+  width: 18px;
+  height: 18px;
   stroke: var(--white);
   fill: none;
-  stroke-width: 1.8;
+  stroke-width: 1.6;
 }
 
 .hamburger {
@@ -148,11 +161,10 @@ section {
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 760px;
+  max-width: 840px;
   padding: 120px 24px 80px;
 }
 
-.eyebrow,
 .section-kicker {
   display: inline-block;
   margin-bottom: 14px;
@@ -169,10 +181,18 @@ section {
   margin-bottom: 18px;
 }
 
-.hero-content p:not(.eyebrow) {
+.hero-content p:not(.section-kicker) {
   font-size: 17px;
   color: var(--text-soft);
   margin-bottom: 32px;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 34px;
 }
 
 .btn {
@@ -194,6 +214,40 @@ section {
   transform: translateY(-1px);
 }
 
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.hero-stats article {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.hero-stats strong {
+  display: block;
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.hero-stats span {
+  color: var(--text-soft);
+  font-size: 14px;
+}
+
 .section-title {
   font-size: clamp(28px, 4vw, 40px);
   font-weight: 700;
@@ -202,8 +256,16 @@ section {
 
 .section-intro {
   max-width: 760px;
-  margin-bottom: 38px;
   color: var(--text-soft);
+}
+
+.section-head,
+.projects-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: end;
+  margin-bottom: 30px;
 }
 
 .about {
@@ -250,6 +312,35 @@ section {
   height: 260px;
 }
 
+.filter-bar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.filter-btn,
+.slider-btn,
+select {
+  font: 500 14px var(--font);
+}
+
+.filter-btn,
+.slider-btn {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  padding: 10px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.filter-btn.active,
+.slider-btn:hover,
+.filter-btn:hover {
+  background: var(--btn);
+}
+
 .collections-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -257,28 +348,99 @@ section {
 }
 
 .collection-card {
-  position: relative;
-  border-radius: 12px;
+  border-radius: 18px;
   overflow: hidden;
   box-shadow: var(--shadow);
+  background: rgba(255, 255, 255, 0.08);
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.collection-card:hover {
+  transform: translateY(-4px);
 }
 
 .collection-card img {
   height: 250px;
-  transition: transform 0.4s ease;
 }
 
-.collection-card:hover img {
-  transform: scale(1.05);
+.card-copy {
+  padding: 18px;
 }
 
 .collection-card .label {
-  position: absolute;
-  inset: auto 0 0 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.68));
-  padding: 34px 16px 16px;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.card-copy p {
+  color: var(--text-soft);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.card-action {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: transparent;
+  color: var(--white);
+  padding: 12px 16px;
+  border-radius: 999px;
+  font: 600 14px var(--font);
+  cursor: pointer;
+}
+
+.card-action.saved {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.hidden-card {
+  display: none;
+}
+
+.estimate-section {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.estimate-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr 0.8fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.estimate-form,
+.estimate-result,
+.contact-intro,
+.contact-form,
+.adv-card {
+  padding: 28px;
+  border-radius: 22px;
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow);
+}
+
+.estimate-points,
+.contact-benefits ul {
+  padding-left: 18px;
+  color: var(--text-soft);
+}
+
+.estimate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.estimate-result h3 {
+  font-size: 34px;
+  margin: 10px 0 14px;
+}
+
+.result-kicker,
+.range-note {
+  color: var(--text-soft);
+  font-size: 14px;
 }
 
 .advantages-sub {
@@ -294,14 +456,6 @@ section {
   gap: 24px;
 }
 
-.adv-card {
-  padding: 18px;
-  border: 1px solid var(--border-soft);
-  border-radius: 18px;
-  background: var(--surface);
-  box-shadow: var(--shadow);
-}
-
 .adv-card img {
   height: 210px;
   margin-bottom: 18px;
@@ -315,6 +469,11 @@ section {
 .adv-card p {
   font-size: 14px;
   color: var(--text-soft);
+}
+
+.slider-controls {
+  display: flex;
+  gap: 10px;
 }
 
 .ready-scroll {
@@ -360,23 +519,21 @@ section {
   align-items: start;
 }
 
-.contact-intro {
-  padding: 28px;
-  border-radius: 22px;
-  background: var(--surface);
-  border: 1px solid var(--border-soft);
-  box-shadow: var(--shadow);
-}
-
 .contact-intro h1 {
   font-size: clamp(32px, 4vw, 48px);
   line-height: 1.15;
   margin-bottom: 18px;
 }
 
-.contact-lead {
+.contact-lead,
+.contact-benefits h2,
+.form-note {
   color: var(--text-soft);
-  margin-bottom: 22px;
+}
+
+.contact-benefits h2 {
+  font-size: 18px;
+  margin: 24px 0 12px;
 }
 
 .contact-details p {
@@ -385,11 +542,6 @@ section {
 
 .contact-form {
   width: 100%;
-  padding: 28px;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid var(--border-soft);
-  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -403,7 +555,8 @@ section {
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
   width: 100%;
   padding: 14px 18px;
   background: transparent;
@@ -415,7 +568,8 @@ section {
   transition: border-color 0.2s;
 }
 
-.form-group input {
+.form-group input,
+.form-group select {
   border-radius: 999px;
 }
 
@@ -430,18 +584,31 @@ section {
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
   border-color: #a00000;
 }
 
 .form-note {
   font-size: 12px;
   text-align: center;
-  color: rgba(247, 248, 249, 0.7);
 }
 
 .contact-form .btn {
   align-self: flex-start;
+}
+
+.form-status {
+  min-height: 24px;
+  font-size: 14px;
+}
+
+.form-status.success {
+  color: #fff3ba;
+}
+
+.form-status.error {
+  color: #ffd2d2;
 }
 
 footer {
@@ -542,12 +709,23 @@ footer {
   .about,
   .contact-wrapper,
   .footer-top,
-  .advantages-grid {
+  .advantages-grid,
+  .estimate-layout {
     grid-template-columns: 1fr;
   }
 
   .collections-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .section-head,
+  .projects-head {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
   }
 
   footer {
@@ -563,10 +741,6 @@ footer {
 
   .hamburger {
     display: flex;
-  }
-
-  .nav-icons svg {
-    display: none;
   }
 
   nav ul {
@@ -618,7 +792,8 @@ footer {
     flex-basis: 210px;
   }
 
-  .contact-form .btn {
+  .contact-form .btn,
+  .card-action {
     width: 100%;
     text-align: center;
   }
@@ -641,9 +816,15 @@ footer {
     font-size: 26px;
   }
 
+  .estimate-form,
+  .estimate-result,
   .contact-intro,
   .contact-form,
   .adv-card {
     padding: 20px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
   }
 }
